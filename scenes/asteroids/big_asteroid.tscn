@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://g7cvxaxbylsr"]
+
+[ext_resource type="Texture2D" uid="uid://bnifa4x8lql68" path="res://assets/sprites/rock-big.png" id="1_6lffe"]
+
+[node name="BigAsteroid" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6lffe")
