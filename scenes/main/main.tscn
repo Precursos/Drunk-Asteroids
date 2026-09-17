@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2qftc1ehy34s"]
+
+[ext_resource type="Texture2D" uid="uid://cpekgcpclrapl" path="res://assets/sprites/background.png" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://g7cvxaxbylsr" path="res://scenes/asteroids/big_asteroid.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://dj5jhgc76hfg1" path="res://scenes/asteroids/medium_asteroid.tscn" id="3_l3cfh"]
+[ext_resource type="PackedScene" uid="uid://xirfkt5fyea3" path="res://scenes/asteroids/small_asteroid.tscn" id="4_6q06x"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(571, 275)
+texture = ExtResource("1_hyk8p")
+
+[node name="BigAsteroid" parent="." instance=ExtResource("2_iuonh")]
+position = Vector2(1286, 310)
+
+[node name="MediumAsteroid" parent="." instance=ExtResource("3_l3cfh")]
+position = Vector2(1276, 127)
+speed = 300.0
+
+[node name="SmallAsteroid" parent="." instance=ExtResource("4_6q06x")]
+position = Vector2(1253, 562)
+speed = 150.0
