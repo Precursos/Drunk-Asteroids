@@ -60,6 +60,8 @@ shape = SubResource("RectangleShape2D_ow5a4")
 position = Vector2(1293, 351)
 script = ExtResource("3_k2fmo")
 big_asteroid_scene = ExtResource("2_iuonh")
+min_y = 70.0
+max_y = 585.0
 
 [node name="Timer" type="Timer" parent="AsteroidSpawner"]
 autostart = true
