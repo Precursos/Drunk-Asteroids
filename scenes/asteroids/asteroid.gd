@@ -19,3 +19,8 @@ func _process(delta):
 	
 	
 	
+
+
+func _on_area_entered(area):
+	if area.is_in_group("laser") or area.is_in_group("player"):
+		queue_free()

@@ -64,6 +64,7 @@ min_y = 70.0
 max_y = 585.0
 
 [node name="Timer" type="Timer" parent="AsteroidSpawner"]
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="AsteroidSpawner/Timer" to="AsteroidSpawner" method="_on_timer_timeout"]
