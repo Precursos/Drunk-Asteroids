@@ -6,8 +6,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfbcv"]
 radius = 29.068884
 
-[node name="SmallAsteroid" type="Area2D"]
+[node name="SmallAsteroid" type="Area2D" groups=["asteroids"]]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_kfbcv")
+min_speed = 200.0
+max_speed = 300.0
+min_rotation_speed = -180.0
+max_rotation_speed = 180.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ckhff")
@@ -15,3 +20,5 @@ texture = ExtResource("1_ckhff")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_kfbcv")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
